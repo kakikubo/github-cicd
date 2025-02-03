@@ -2,9 +2,9 @@ name: Hello
 on: push
 jobs:
   hello:
-   run-on: ubuntu-latest
+   runs-on: ubuntu-latest
    steps:
-     - run: |
+   - run: |
          tree -a
          echo "Hello, World!"
      - uses: actions/checkout@v4
