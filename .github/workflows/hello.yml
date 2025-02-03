@@ -2,7 +2,7 @@ name: Hello
 on: push
 jobs:
   hello:
-   runs-on: ubuntu-latest
+   run-on: ubuntu-latest
    steps:
      - run: |
          tree -a
