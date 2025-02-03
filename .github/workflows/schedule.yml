@@ -1,0 +1,10 @@
+name: Schedule
+on:
+  # 必ずこの時間に実行されるわけではない
+  schedule:
+    - cron: '*/15 * * * *'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
