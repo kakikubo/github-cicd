@@ -89,3 +89,8 @@ could not create workflow dispatch event: HTTP 403: Must have admin rights to Re
 Github Marketplaceからアクションを探す事ができる
 
 <https://github.com/marketplace>
+
+## 中間環境変数
+
+1. コンテキストはシェルコマンドへハードコードせず、環境変数を経由して渡す
+2. 環境変数はすべてダブルクォーテーションで囲む
