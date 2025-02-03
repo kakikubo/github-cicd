@@ -6,6 +6,7 @@ jobs:
     steps:
       - run: |
           echo "実行ユーザ ${{ github.actor }}" # githubコンテキストの参照
+          echo "実行ユーザ ${GITHUB_ACTOR}" # デフォルト環境変数の参照
           echo "ワークフローの実行ID ${{ github.run_id}}"
           echo "プルリクエストのソースブランチ ${{ github.head_ref }}"
           echo "ステップのワーキングディレクトリ ${{ github.workspace }}"
