@@ -12,3 +12,9 @@ jobs:
           echo "リポジトリ名 ${{ github.repository }}"
           echo "リポジトリのオーナー名 ${{ github.repository_owner }}"
           echo "トリガーになったイベント ${{ github.event }}" # eventはオブジェクト(ダンプして値をみる)
+          echo "ランナーの名前 ${{ runner.name }}"
+          echo "OS ${{ runner.os }}"
+          echo "CPUアーキテクチャ ${{ runner.arch }}"
+          echo "一時ディレクトリのパス ${{ runner.temp }}"
+          echo "インストール済みツールのディレクトリパス ${{ runner.tool_cache }}"
+          echo "デバッグログ ${{ runner.debug }}"
