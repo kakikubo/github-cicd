@@ -76,3 +76,16 @@ could not create workflow dispatch event: HTTP 403: Must have admin rights to Re
 1. GitHubリポジトリに対する管理者権限があることを確認する。
 2. `gh auth status`コマンドを使用して、GitHub CLIが正しいアカウントで認証されていることを確認する。
 3. 必要に応じて、`gh auth login`コマンドを使用して再認証する。
+
+
+## runner
+
+インストールされているソフトウェアは以下で確認可能
+
+<https://github.com/actions/runner-images>
+
+## action
+
+Github Marketplaceからアクションを探す事ができる
+
+<https://github.com/marketplace>
