@@ -4,4 +4,11 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.actor }}" # githubコンテキストの参照
+      - run: |
+          echo "実行ユーザ ${{ github.actor }}" # githubコンテキストの参照
+          echo "ワークフローの実行ID ${{ github.run_id}}"
+          echo "プルリクエストのソースブランチ ${{ github.head_ref }}"
+          echo "ステップのワーキングディレクトリ ${{ github.workspace }}"
+          echo "リポジトリ名 ${{ github.repository }}"
+          echo "リポジトリのオーナー名 ${{ github.repository_owner }}"
+          echo "トリガーになったイベント ${{ github.event }}"
