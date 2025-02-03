@@ -11,4 +11,4 @@ jobs:
           echo "ステップのワーキングディレクトリ ${{ github.workspace }}"
           echo "リポジトリ名 ${{ github.repository }}"
           echo "リポジトリのオーナー名 ${{ github.repository_owner }}"
-          echo "トリガーになったイベント ${{ github.event }}"
+          echo "トリガーになったイベント ${{ github.event }}" # eventはオブジェクト(ダンプして値をみる)
