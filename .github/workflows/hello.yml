@@ -4,9 +4,10 @@ jobs:
   hello:
    runs-on: ubuntu-latest
    steps:
-   - run: |
-         tree -a
-         echo "Hello, World!"
+     - run: |
+        invalid-command
+        tree -a
+        echo "Hello, World!"
      - uses: actions/checkout@v4
        with:
           ref: main
