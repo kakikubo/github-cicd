@@ -94,3 +94,21 @@ Github Marketplaceからアクションを探す事ができる
 
 1. コンテキストはシェルコマンドへハードコードせず、環境変数を経由して渡す
 2. 環境変数はすべてダブルクォーテーションで囲む
+
+## Variables
+
+以下からセットできる。
+<https://github.com/kakikubo/github-cicd/settings/variables/actions>
+
+```bash
+% gh variable set USERNAME --body ':octcat:'
+✓ Updated variable USERNAME for kakikubo/github-cicd
+```
+
+でも可能。
+
+```plaintext
+* failed to set variable "USERNAME": HTTP 403: Must have admin rights to Repository. (https://api.github.com/repos/kakikubo/github-cicd/actions/variables)
+```
+
+といわれる時は、`personal-access-token`の権限で`Variables`の設定を確認する。`Read And Write`になっていれば良い。
