@@ -67,7 +67,7 @@ To see the YAML for this workflow, try: gh workflow view hello.yml --yaml
 
 `gh workflow run`コマンドを実行する際に、以下のエラーが発生する場合があります:
 
-```
+```plaintext
 could not create workflow dispatch event: HTTP 403: Must have admin rights to Repository.
 ```
 
@@ -76,7 +76,6 @@ could not create workflow dispatch event: HTTP 403: Must have admin rights to Re
 1. GitHubリポジトリに対する管理者権限があることを確認する。
 2. `gh auth status`コマンドを使用して、GitHub CLIが正しいアカウントで認証されていることを確認する。
 3. 必要に応じて、`gh auth login`コマンドを使用して再認証する。
-
 
 ## runner
 
@@ -112,3 +111,12 @@ Github Marketplaceからアクションを探す事ができる
 ```
 
 といわれる時は、`personal-access-token`の権限で`Variables`の設定を確認する。`Read And Write`になっていれば良い。
+
+## Secrets
+
+以下からセットできる。
+<https://github.com/kakikubo/github-cicd/settings/secrets/actions>
+
+```bash
+gh secret set PASSWORD --body 'SuperSecret!'
+```
