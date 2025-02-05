@@ -1,0 +1,12 @@
+name: Generate Functions
+on: workflow_dispatch
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Functions
+        run: printenv | grep '_FUNC'
+        env:
+          FORMAT_FUNC: ${{ format('{0}, {1}', 'Hi', 'World') }} #フォーマット
+          JOIN_FUNC: ${{ join(github.event.*.html_url, ', ') }} #カンマで結合
