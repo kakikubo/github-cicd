@@ -2,7 +2,7 @@ name: Conditions workflow
 on: workflow_dispatch
 jobs:
   skip-or-run:
-    if: ${{ github.actor == 'kakikubo' }} # kakikuboアカウント以外は実行をスキップ
+    if: ${{ github.actor == 'octcat' }} # octcatアカウント以外は実行をスキップ
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
