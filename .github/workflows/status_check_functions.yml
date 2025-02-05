@@ -1,0 +1,9 @@
+name: Status check functions
+on: workflow_dispatch
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1          # 終了ステータスが0以外なのでエラーが発生する
+      - run: echo "Hello"
+        if: ${{ failure()}}  # エラーが発生してもfailure関数があるので実行される
