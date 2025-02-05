@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "Hello"
-        if: ${{ contains(github.run_id, '1') }} # ワークフロー実行IDで分岐
+        if: ${{ contains(github.run_id, '8') }} # ワークフロー実行IDで分岐
