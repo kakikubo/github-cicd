@@ -1,0 +1,9 @@
+name: Conditions
+on: workflow_dispatch
+jobs:
+  hash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Hello"
+        if: ${{ contains(github.run_id, '1') }} # ワークフロー実行IDで分岐
