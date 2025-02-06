@@ -120,3 +120,7 @@ Github Marketplaceからアクションを探す事ができる
 ```bash
 gh secret set PASSWORD --body 'SuperSecret!'
 ```
+
+## Permission関連のドキュメント
+
+<https://docs.github.com/ja/rest>
