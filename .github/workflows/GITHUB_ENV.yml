@@ -1,0 +1,9 @@
+name: GITHUB_ENV
+on: workflow_dispatch
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - id: source
+        run: echo "result=Hello" >> "${GITHUB_ENV}" # GITHUB_ENVへ書き出し
+      - run: echo "${RESULT}"                       # 通常の環境変数として参照
