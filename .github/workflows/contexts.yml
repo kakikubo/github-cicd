@@ -10,7 +10,7 @@ jobs:
           echo "実行ユーザ ${ACTOR}"
           echo "実行ユーザ ${GITHUB_ACTOR}" # デフォルト環境変数の参照
           echo "ワークフローの実行ID ${{ github.run_id}}"
-          echo "プルリクエストのソースブランチ ${{ github.head_ref }}"
+          echo "プルリクエストのソースブランチ ${GITHUB_HEAD_REF}"
           echo "ステップのワーキングディレクトリ ${{ github.workspace }}"
           echo "リポジトリ名 ${{ github.repository }}"
           echo "リポジトリのオーナー名 ${{ github.repository_owner }}"
@@ -21,3 +21,5 @@ jobs:
           echo "一時ディレクトリのパス ${{ runner.temp }}"
           echo "インストール済みツールのディレクトリパス ${{ runner.tool_cache }}"
           echo "デバッグログ ${{ runner.debug }}"
+        env:
+          GITHUB_HEAD_REF: ${{ github.head_ref }}
