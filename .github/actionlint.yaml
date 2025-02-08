@@ -15,6 +15,9 @@ config-variables: null
 # "ignore" is an array of regular expression patterns. Matched error messages
 # are ignored. This is similar to the "-ignore" command line option.
 paths:
+  .github/workflows/contexts.yml:
+    ignore:
+      - 'object, array, and null values should not be evaluated in template'
   .github/workflows/literals.yml:
     ignore:
       - 'object, array, and null values should not be evaluated in template'
