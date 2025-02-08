@@ -9,4 +9,4 @@ jobs:
       - shell: python
         run: |
           import os
-          print(os.environ['SHELL'])
+          print(os.environ['PATH'])
