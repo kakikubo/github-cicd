@@ -21,5 +21,8 @@ paths:
   .github/workflows/literals.yml:
     ignore:
       - 'object, array, and null values should not be evaluated in template'
+  .github/workflows/invalid.yml:
+    ignore:
+      - '"jobs" section is missing in workflow'
 #  .github/workflows/**/*.yml:
 #    ignore: []
