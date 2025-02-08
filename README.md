@@ -124,3 +124,11 @@ gh secret set PASSWORD --body 'SuperSecret!'
 ## Permission関連のドキュメント
 
 <https://docs.github.com/ja/rest>
+
+## Linter
+
+actionlintをローカルで実行するには以下の通り
+
+```bash
+docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
+```
