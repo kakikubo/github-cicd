@@ -5,5 +5,6 @@ jobs:
   sleep:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ github.workflow}}
       - run: sleep 120 # 2分(120秒) スリープ
   
