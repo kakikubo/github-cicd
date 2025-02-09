@@ -7,5 +7,5 @@ jobs:
   sleep:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.workflow }}-${{ github.ref }}
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
       - run: sleep 120 # 2分(120秒) スリープ
