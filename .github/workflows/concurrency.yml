@@ -1,0 +1,9 @@
+name: Concurrency
+on: workflow_dispatch
+concurrency: ${{ github.workflow }}
+jobs:
+  sleep:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 120 # 2分(120秒) スリープ
+  
