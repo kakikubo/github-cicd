@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}" # Auto cancel-refs/pull/7/merge のような文字列になる
-      - run: sleep 20 # (20秒) スリープ
+      - run: sleep 10 # (10秒) スリープ
