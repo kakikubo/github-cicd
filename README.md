@@ -132,3 +132,9 @@ actionlintをローカルで実行するには以下の通り
 ```bash
 docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
 ```
+
+## リリースタグとリリースノートの作成
+
+```bash
+gh release create v0.1.0 --title "v0.1.0" --notes "Wonderful Text" example.txt
+```
