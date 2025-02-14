@@ -138,3 +138,21 @@ docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
 ```bash
 gh release create v0.1.0 --title "v0.1.0" --notes "Wonderful Text" example.txt
 ```
+
+## パッケージのビルド
+
+```bash
+export GHCR_USER=$(gh config get -h github.com user)
+docker build -t ghcr.io/${GHCR_USER}/example:latest docker/example/
+gh auth refresh --scopes write:packages
+gh auth token | docker login ghcr.io -u ${GHCR_USER} --password-stdin
+docker push ghcr.io/${GHCR_USER}/example:latest
+```
+
+## パッケージとリポジトリを自動リンクさせるビルド
+
+```bash
+docker build -t ghcr.io/${GHCR_USER}/auto-link:latest \
+  --label "org.opencontainers.image.source=https://github.com/${GHCR_USER}/github-cicd" \
+  docker/example/
+```

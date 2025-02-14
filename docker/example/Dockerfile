@@ -5,4 +5,5 @@
 # docker push ghcr.io/${GHCR_USER}/example:latest
 # docker pull ghcr.io/${GHCR_USER}/example:latest
 FROM nginx:1.25-alpine
+LABEL org.opencontainers.image.source=https://github.com/kakikubo/github-cicd
 RUN echo 'Hello Github Packages' > /usr/share/nginx/html/index.html
