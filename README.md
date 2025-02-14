@@ -156,3 +156,6 @@ docker build -t ghcr.io/${GHCR_USER}/auto-link:latest \
   --label "org.opencontainers.image.source=https://github.com/${GHCR_USER}/github-cicd" \
   docker/example/
 ```
+
+上記で問題なく動作する筈だが、リポジトリとの自動リンクがうまくいかないケースがあった為、`/.github/workflows/docker-publish.yml` からDockerのビルドとプッシュを
+行うようにした。
