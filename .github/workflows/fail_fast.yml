@@ -1,0 +1,20 @@
+name: Fail-fast matrix
+on: 
+  workflow_dispatch:
+    inputs:
+      fail-fast:
+        description: 'Fail fast'
+        required: true
+        default: true
+        type: boolean
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: ${{ fromJSON(inputs.fail-fast) }}
+      matrix:
+        time: [10, 20, 30]
+    steps:
+      - run: sleep "${SLEEP_TIME}" && exit 1
+        env:
+          SLEEP_TIME: ${{ matrix.time }}
