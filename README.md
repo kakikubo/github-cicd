@@ -159,3 +159,10 @@ docker build -t ghcr.io/${GHCR_USER}/auto-link:latest \
 
 上記で問題なく動作する筈だが、リポジトリとの自動リンクがうまくいかないケースがあった為、`/.github/workflows/docker-publish.yml` からDockerのビルドとプッシュを
 行うようにした。
+
+## OpenSSF Scorecard
+
+```bash
+% docker run -e GITHUB_AUTH_TOKEN=$(gh auth token) \
+  gcr.io/openssf/scorecard:stable --repo="kakikubo/github-cicd"
+```
