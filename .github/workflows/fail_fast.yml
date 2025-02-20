@@ -11,7 +11,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: ${{ fromJSON(inputs.fail-fast) }}
+      fail-fast: ${{ inputs.fail-fast }}
       matrix:
         time: [10, 20, 30]
     steps:
