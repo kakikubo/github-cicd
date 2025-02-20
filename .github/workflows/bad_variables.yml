@@ -6,6 +6,8 @@ jobs:
     # そのままタイトルにセットしてしまうとactions実行時にスクリプトインジェクションの脆弱性が生じる
     # steps: 
     #   - run: echo "${{ github.event.pull_request.title }}"
+    #   
+    # 中間環境変数を利用すると、`inject"; printenv; #`という文字列が出力される
     steps:
       - run: echo "${PR_TITLE}"
         env:
