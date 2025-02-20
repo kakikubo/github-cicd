@@ -3,5 +3,5 @@ on: pull_request
 jobs:
   print:
     runs-on: ubuntu-latest
-    steps:
+    steps: # そのままタイトルにセットしてしまうとactions実行時にスクリプトインジェクションの脆弱性が生じる
       - run: echo "${{ github.event.pull_request.title }}"
