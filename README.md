@@ -104,6 +104,8 @@ Github Marketplaceからアクションを探す事ができる
 
 `good code`
 
+中間環境変数を利用すると、`inject"; printenv; #`という文字列が出力される
+
 ```actions
 - name: Set PR title
   run: echo "${{ PR_TITLE }}"
