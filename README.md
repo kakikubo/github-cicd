@@ -185,3 +185,17 @@ docker build -t ghcr.io/${GHCR_USER}/auto-link:latest \
 % docker run -e GITHUB_AUTH_TOKEN=$(gh auth token) \
   gcr.io/openssf/scorecard:stable --repo="kakikubo/github-cicd"
 ```
+
+## OpenID Connect
+
+ワークフローが一時クレデンシャルを扱う流れ
+
+```mermaid
+graph LR
+  A[Github OIDC Provider]
+  B[ワークフロー]
+  C[クラウドプロバイダ]
+  B -->|①OIDCトークンの取得| A
+  B -->|②OIDCトークンと一時クレデンシャルを交換| C
+  B -->|③一時クレデンシャルで操作| C
+```
