@@ -1,5 +1,5 @@
 name: Bad variables
-on: workflow_dispatch
+on: pull_request
 jobs:
   print:
     runs-on: ubuntu-latest
