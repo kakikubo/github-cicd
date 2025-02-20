@@ -94,6 +94,23 @@ Github Marketplaceからアクションを探す事ができる
 1. コンテキストはシェルコマンドへハードコードせず、環境変数を経由して渡す
 2. 環境変数はすべてダブルクォーテーションで囲む
 
+`bad code`
+
+以下の場合、titleに`inject; printenv; #`というタイトルを入れると、実行時に環境変数が出力されてしまう。
+
+```actions
+- run: echo "${{ github.event.pull_request.title }}"
+```
+
+`good code`
+
+```actions
+- name: Set PR title
+  run: echo "${{ PR_TITLE }}"
+  env:
+    PR_TITLE: ${{ github.event.pull_request.title }}
+```
+
 ## Variables
 
 以下からセットできる。
