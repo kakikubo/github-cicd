@@ -8,3 +8,7 @@ FROM nginx:1.27-alpine
 ARG GHCR_USER
 LABEL org.opencontainers.image.source https://github.com/${GHCR_USER}/github-cicd
 RUN echo 'Hello Github Packages' > /usr/share/nginx/html/index.html
+
+# 非rootユーザーを作成し、実行ユーザーを変更
+RUN adduser -D appuser
+USER appuser
