@@ -199,3 +199,19 @@ graph LR
   B -->|②OIDCトークンと一時クレデンシャルを交換| C
   B -->|③一時クレデンシャルで操作| C
 ```
+
+## Github Appsトークン生成スクリプトの実行
+
+```bash
+export APP_ID="<App ID>"
+export PRIVATE_KEY=$(cat private-key.pem)
+export TARGET_REPO="github-terraform"
+```
+
+さらにローカル環境で実行する為には以下もセット
+
+```bash
+export GITHUB_API_URL="https://api.github.com"
+export GITHUB_REPOSITORY_OWNER=$(gh config get -h github.com user)
+export GITHUB_OUTPUT="/dev/stdout"
+```
