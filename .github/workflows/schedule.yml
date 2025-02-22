@@ -3,6 +3,7 @@ on:
   # 必ずこの時間に実行されるわけではない
   schedule:
     - cron: '*/15 * * * *'
+permissions: {}
 jobs:
   run:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Compare Functions
 on: workflow_dispatch
+permissions: {}
 jobs:
   compare:
     runs-on: ubuntu-latest

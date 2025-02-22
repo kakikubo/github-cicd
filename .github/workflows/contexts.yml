@@ -1,5 +1,6 @@
 name: Contexts
 on: workflow_dispatch
+permissions: {}
 jobs:
   print:
     runs-on: ubuntu-latest

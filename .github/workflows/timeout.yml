@@ -1,5 +1,6 @@
 name: Timeout
 on: workflow_dispatch
+permissions: {}
 jobs:
   sleep:
     runs-on: ubuntu-latest

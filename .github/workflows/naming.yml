@@ -1,6 +1,7 @@
 name: Naming
 run-name: Run by @${{ github.actor }}
 on: workflow_dispatch
+permissions: {}
 jobs:
   print:
     name: Super Useful Job   # ジョブ名の指定

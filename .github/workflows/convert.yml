@@ -2,6 +2,7 @@ name: Convert
 on: workflow_dispatch
 env:
   TIMEOUT: 1                                         # 環境変数はstring型となる
+permissions: {}
 jobs:
   sleep:
     runs-on: ubuntu-latest

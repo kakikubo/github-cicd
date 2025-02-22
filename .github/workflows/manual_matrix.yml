@@ -1,5 +1,6 @@
 name: Manual matrix
 on: workflow_dispatch
+permissions: {}
 jobs:
   print:
     strategy:

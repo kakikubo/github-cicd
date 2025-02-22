@@ -1,6 +1,7 @@
 name: Concurrency
 on: workflow_dispatch
 concurrency: ${{ github.workflow }}
+permissions: {}
 jobs:
   sleep:
     runs-on: ubuntu-latest

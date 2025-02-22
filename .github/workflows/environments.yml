@@ -7,7 +7,7 @@ on:
         default: test
         required: false
         description: Environment name
-
+permissions: {}
 jobs:
   print:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Conditions
 on: workflow_dispatch
+permissions: {}
 jobs:
   hash:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Missing Share Data
 on: workflow_dispatch
+permissions: {}
 jobs:
   share:
     runs-on: ubuntu-latest

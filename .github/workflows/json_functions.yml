@@ -1,5 +1,6 @@
 name: JSON functions
 on: workflow_dispatch
+permissions: {}
 jobs:
   dump:
     runs-on: ubuntu-latest

@@ -7,6 +7,7 @@ on:
         default: Hello
         required: true
         description: A cheerful word
+permissions: {}
 jobs:
   run:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Multi-dimension matrix
 on: workflow_dispatch
+permissions: {}
 jobs:
   print:
     strategy:
