@@ -1,5 +1,6 @@
 name: Conditions workflow
 on: workflow_dispatch
+permissions: {}
 jobs:
   skip-or-run:
     if: ${{ github.actor == 'octcat' }} # octcatアカウント以外は実行をスキップ

@@ -2,6 +2,7 @@ name: Override Environment Variables
 on: workflow_dispatch
 env:
   EXAMPLE: Defined by workflow level
+permissions: {}
 jobs:
   print:
     runs-on: ubuntu-latest

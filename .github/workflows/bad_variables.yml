@@ -1,5 +1,6 @@
 name: Bad variables
 on: pull_request
+permissions: {}
 jobs:
   print:
     runs-on: ubuntu-latest

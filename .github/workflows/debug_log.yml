@@ -1,5 +1,6 @@
 name: Debug log
 on: workflow_dispatch
+permissions: {}
 jobs:
   log:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: GITHUB_ENV
 on: workflow_dispatch
+permissions: {}
 jobs:
   share:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Sequential jobs
 on: workflow_dispatch
+permissions: {}
 jobs:
   first: # 依存ジョブがないので最初に実行される
     runs-on: ubuntu-latest

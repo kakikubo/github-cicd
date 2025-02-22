@@ -1,5 +1,6 @@
 name: Share job data
 on: workflow_dispatch
+permissions: {}
 jobs:
   before:
     runs-on: ubuntu-latest

@@ -1,5 +1,6 @@
 name: Artifacts
 on: workflow_dispatch
+permissions: {}
 jobs:
   upload:
     runs-on: ubuntu-latest

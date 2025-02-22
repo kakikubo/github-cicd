@@ -1,5 +1,6 @@
 name: Environment Variables
 on: workflow_dispatch
+permissions: {}
 jobs:
   run:
     runs-on: ubuntu-latest

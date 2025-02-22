@@ -1,5 +1,6 @@
 name: Bash tracing
 on: workflow_dispatch
+permissions: {}
 jobs:
   log:
     runs-on: ubuntu-latest

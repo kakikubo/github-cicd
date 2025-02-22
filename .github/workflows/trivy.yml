@@ -1,5 +1,6 @@
 name: Container image scan
 on: pull_request
+permissions: {}
 jobs:
   scan:
     runs-on: ubuntu-latest

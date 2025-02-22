@@ -1,5 +1,6 @@
 name: Comment
 on: pull_request
+permissions: {}
 jobs:
   comment:
     runs-on: ubuntu-latest

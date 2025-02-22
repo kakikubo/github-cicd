@@ -15,6 +15,7 @@ on:
       message:
         value: ${{ jobs.comment.outputs.pr-comment }}
         description: メッセージ
+permissions: {}
 jobs:            # Reusable Workflowsのジョブ定義
   comment:
     runs-on: ubuntu-latest

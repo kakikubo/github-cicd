@@ -1,5 +1,6 @@
 name: Hash functions
 on: workflow_dispatch
+permissions: {}
 jobs:
   hash:
     runs-on: ubuntu-latest
@@ -8,4 +9,3 @@ jobs:
       - run: echo "${HASH}"
         env:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
-

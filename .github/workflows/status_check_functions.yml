@@ -1,5 +1,6 @@
 name: Status check functions
 on: workflow_dispatch
+permissions: {}
 jobs:
   fail:
     runs-on: ubuntu-latest

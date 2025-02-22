@@ -1,5 +1,6 @@
 name: Dynamic Matrix
 on: workflow_dispatch
+permissions: {}
 jobs:
   prepare:
     runs-on: ubuntu-latest
