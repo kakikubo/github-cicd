@@ -176,8 +176,7 @@ docker build -t ghcr.io/${GHCR_USER}/auto-link:latest \
   docker/example/
 ```
 
-上記で問題なく動作する筈だが、リポジトリとの自動リンクがうまくいかないケースがあった為、`/.github/workflows/docker-publish.yml` からDockerのビルドとプッシュを
-行うようにした。
+上記で問題なく動作する筈だが、リポジトリとの自動リンクがうまくいかないケースがあった為、`/.github/workflows/docker-publish.yml` からDockerのビルドとプッシュを行うようにした。
 
 ## OpenSSF Scorecard
 
@@ -214,4 +213,14 @@ export TARGET_REPO="github-terraform"
 export GITHUB_API_URL="https://api.github.com"
 export GITHUB_REPOSITORY_OWNER=$(gh config get -h github.com user)
 export GITHUB_OUTPUT="/dev/stdout"
+```
+
+## Gitleaksによるヒストリスキャン
+
+`.github/workflows/gitleaks.yml`にも同様の実装があるが、ローカルで実行する場合は以下の通り
+
+```bash
+docker run -v $(pwd):`pwd` -w "$(pwd)" \
+  --rm -it zricethezav/gitleaks detect --source="$(pwd)" --verbose --redact
+  --log-opts="--all --full-history"
 ```
