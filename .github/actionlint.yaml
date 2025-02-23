@@ -27,8 +27,5 @@ paths:
   .github/workflows/old.yml:
     ignore:
       - the runner of "actions/setup-go@v4" action is too old to run on GitHub Actions. update the action's version to fix this issue
-  .github/workflows/cross_repo_sh.yml:
-    ignore:
-      - 'specifying action ".github/scripts/token.sh" in invalid format because ref is missing.'
 #  .github/workflows/**/*.yml:
 #    ignore: []
