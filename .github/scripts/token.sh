@@ -39,4 +39,5 @@ token="$(curl --location --silent --request POST \
   --data "$(printf '{"repositories":["%s"]}' "${TARGET_REPO}")" \
   | jq -r '.token'
 )"
+echo "::add-mask::${token}"
 echo "token=${token}" >> "${GITHUB_OUTPUT}"
