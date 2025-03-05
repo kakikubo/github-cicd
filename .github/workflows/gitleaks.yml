@@ -1,5 +1,5 @@
+# クレデンシャル情報をgit logのhistoryから検出する 
 name: gitleaks
-description: クレデンシャル情報をgit logのhistoryから検出する 
 on:
   pull_request:
   push:
