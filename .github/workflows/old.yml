@@ -5,6 +5,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-go@v4 # 古いバージョンを意図的に指定
+      - uses: actions/setup-go@93397bea11091df50f3d7e59dc26a7711a8bcfbe # v4 # 古いバージョンを意図的に指定
         with:
           go-version: 1.16
