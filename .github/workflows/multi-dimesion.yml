@@ -9,7 +9,7 @@ jobs:
         version: [18, 20]                 # versionプロパティの定義
     runs-on: ${{ matrix.os }}             # osプロパティの参照
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4
         with:
           node-version: ${{ matrix.version }}
       - run: echo "${RUNNER_OS}" && node --version
