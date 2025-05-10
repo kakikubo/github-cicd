@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - id: meta                                      # 依存関係のメタデータを取得
-        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7 # v2            # 条件分岐でパッチバージョンかチェック
+        uses: dependabot/fetch-metadata@08eff52bf64351f401fb50d4972fa95b9f2c2d1b # v2            # 条件分岐でパッチバージョンかチェック
       - if: ${{ steps.meta.outputs.update-type == 'version-update:semver-patch' }}
         run: |                                        # Github CLIで承認とマージ 
           gh pr review "${GITHUB_HEAD_REF}" --approve
