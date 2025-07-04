@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Trivy Security Scanner
-        uses: aquasecurity/trivy-action@76071ef0d7ec797419534a183b498b4d6366cf37 # 0.31.0
+        uses: aquasecurity/trivy-action@dc5a429b52fcf669ce959baa2c2dd26090d2a6c4 # 0.32.0
         with:
           image-ref: nginx:1.27.4
           severity: CRITICAL,HIGH
