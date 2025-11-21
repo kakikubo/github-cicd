@@ -8,7 +8,7 @@ jobs:
       pull-requests: write # プルリクエストの書き込みを許可
       # contents: read     # permission指定時にcontentsを指定しないと許可されない。ただし、publicリポジトリの場合は不要
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
       - run: gh pr comment "${GITHUB_HEAD_REF}" -b "Hello, ${GITHUB_ACTOR}!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Github CLI用クレデンシャル
