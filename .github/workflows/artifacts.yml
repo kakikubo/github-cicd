@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: date > date.txt              # アーティファクトの生成
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6  # アーティファクトのアップロード
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7  # アーティファクトのアップロード
         with:
           name: uploaded                  # アーティファクト名
           path: date.txt                  # アーティファクト対象のパス
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [upload]                       # uploadジョブの実行を待つ
     steps:
-      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7 # アーティファクトのダウンロード
+      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8 # アーティファクトのダウンロード
         with:
           name: uploaded                  # アーティファクト名
           path: downloaded                # ダウンロード先のパス
