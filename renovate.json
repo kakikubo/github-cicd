@@ -9,6 +9,17 @@
         "action"
       ],
       "pinDigests": true
+    },
+    {
+      "matchPackageNames": [
+        "actions/download-artifact"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor"
+      ],
+      "automerge": true
     }
   ]
 }
