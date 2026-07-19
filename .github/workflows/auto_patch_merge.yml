@@ -3,7 +3,7 @@ on: pull_request
 permissions: {}
 jobs:
   merge:
-    if: ${{ github.event_name == 'dependabot[bot]'}}  # DependabotのPRのみ
+    if: ${{ github.actor == 'dependabot[bot]' }}      # DependabotのPRのみ
     runs-on: ubuntu-latest
     permissions:                                      # マージに必要なパーミッション
       contents: write
