@@ -19,6 +19,6 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: Run Gosec Security Scanner
-        uses: securego/gosec@4504603eddc5a91a7b7713932d6d1d3792126103 # master
+        uses: securego/gosec@ff25931a2edda1c6bee86cea092aefca3c0c04c4 # master
         with:
           args: ./...
