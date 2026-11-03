@@ -6,6 +6,7 @@ concurrency:
 permissions: {}
 jobs:
   sleep:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}" # Auto cancel-refs/pull/7/merge のような文字列になる

@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   print:
+    timeout-minutes: 5
     strategy:
       matrix:                             # 多次元マトリックスの定義
         os: [ubuntu-latest, macos-latest] # osプロパティの定義

@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   prepare:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - id: dynamic
@@ -12,6 +13,7 @@ jobs:
     outputs:   # マトリックス定義のJSON文字列をジョブ出力値へセット
       matrix-json: ${{ steps.dynamic.outputs.json }}
   print:
+    timeout-minutes: 5
     needs: [prepare]
     strategy:  # JSON文字列からfromJSON関数で動的にマトリックスを生成
       matrix: ${{ fromJSON(needs.prepare.outputs.matrix-json) }}
