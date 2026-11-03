@@ -1,1 +1,5 @@
 .idea/*
+
+# ビルド・リリースデモで生成する成果物
+/example
+/example.txt
