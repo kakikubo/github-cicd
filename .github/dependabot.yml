@@ -1,0 +1,12 @@
+# GitHub Actions の更新は Dependabot が担う（actions.lock を導入した場合も同じ PR で再生成される）
+# それ以外の依存関係（Dockerfile 等）は Renovate（renovate.json）で更新する
+version: 2
+updates:
+  - package-ecosystem: github-actions # パッケージエコシステム
+    directory: /                      # パッケージマニフェストの配置先ディレクトリ
+    schedule:                         # バージョンアップスケジュール
+      interval: daily
+      time: "09:00"
+      timezone: Asia/Tokyo
+    labels:                           # release.yml でリリースノートから除外されるラベル
+      - dependencies
