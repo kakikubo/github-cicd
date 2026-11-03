@@ -1,3 +1,4 @@
+# Dependabot PR 向けの自動マージ例。依存更新は Renovate に統一したため、本リポジトリでは参照用のデモとして残している
 name: Auto merge
 on: pull_request
 permissions: {}

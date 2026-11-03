@@ -12,3 +12,4 @@ changelog:
       - dependencies
     authors:              # 除外するプルリクエスト作成者
       - dependabot
+      - renovate
