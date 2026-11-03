@@ -4,6 +4,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   print:
+    timeout-minutes: 5
     name: Super Useful Job   # ジョブ名の指定
     runs-on: ubuntu-latest
     steps:

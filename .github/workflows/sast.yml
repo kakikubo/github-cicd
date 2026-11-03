@@ -12,6 +12,7 @@ jobs:
   #     - run: pip install bandit # Banditのインストール
   #     - run: bandit -r .        # BanditでPythonのコードスキャン
   test:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
       GO111MODULE: on

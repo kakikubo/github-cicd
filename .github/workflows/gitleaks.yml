@@ -9,6 +9,7 @@ on:
 permissions: {}
 jobs:
   scan:
+    timeout-minutes: 5
     name: gitleaks
     runs-on: ubuntu-latest
     steps:

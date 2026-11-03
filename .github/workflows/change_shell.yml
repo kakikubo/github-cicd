@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   print:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - shell: bash

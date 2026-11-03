@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   upload:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: date > date.txt              # アーティファクトの生成
@@ -12,6 +13,7 @@ jobs:
           path: date.txt                  # アーティファクト対象のパス
           retention-days: 7               # アーティファクトの保存期間
   download:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     needs: [upload]                       # uploadジョブの実行を待つ
     steps:

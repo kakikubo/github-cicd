@@ -10,3 +10,10 @@ deny_workflow_permission_are_not_empty contains msg if { # ワークフローレ
   input.permissions != {}
   msg = sprintf("Workflow permissions are not empty: %v", [input.permissions])
 }
+
+deny_job_timeout_minutes_missing contains msg if { # timeout-minutesが未設定のジョブを拒否（Reusable Workflowsの呼び出しジョブは指定不可のため除外）
+  some name, job in input.jobs
+  not job.uses
+  not job["timeout-minutes"]
+  msg = sprintf("Job timeout-minutes is missing: %v", [name])
+}

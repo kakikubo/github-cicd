@@ -3,6 +3,7 @@ on: pull_request
 permissions: {}
 jobs:
   comment:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:           # GITHUB_TOKENの権限を設定
       pull-requests: write # プルリクエストの書き込みを許可

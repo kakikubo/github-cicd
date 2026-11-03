@@ -1,8 +1,9 @@
 # リポジトリ全体のコードオーナーを設定する(マッチする設定がない場合のフォールバック先)
 * @kakikubo
 
-# 特定のファイル種別のみコードオナーをTeamに設定する
+# 特定のファイル種別のみコードオーナーをTeamに設定する
+# 注: @kteam/Dev01 は記法説明用のデモ値（実在しないチーム）
 *.txt @kteam/Dev01
 
 # 特定ディレクトリ配下のコードオーナーを、複数アカウントへ設定する
-.github/workflow/ @kakikubo @kteam/Dev01 
+.github/workflows/ @kakikubo @kteam/Dev01

@@ -5,6 +5,7 @@ env:
 permissions: {}
 jobs:
   sleep:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: sleep 120

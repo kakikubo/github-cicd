@@ -4,6 +4,7 @@ on: pull_request
 permissions: {}
 jobs:
   merge:
+    timeout-minutes: 5
     if: ${{ github.actor == 'dependabot[bot]' }}      # DependabotのPRのみ
     runs-on: ubuntu-latest
     permissions:                                      # マージに必要なパーミッション

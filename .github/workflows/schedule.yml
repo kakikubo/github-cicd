@@ -2,10 +2,12 @@ name: Schedule
 on:
   # 必ずこの時間に実行されるわけではない
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 0 * * 1' # 毎週月曜 00:00 UTC（デモのため低頻度）
+  workflow_dispatch: # デモ時は手動実行する
 permissions: {}
 jobs:
   run:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: date

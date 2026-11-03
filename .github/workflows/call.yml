@@ -12,6 +12,7 @@ jobs:
       contents: read
       pull-requests: write
   print:
+    timeout-minutes: 5
     needs: [call]
     runs-on: ubuntu-latest
     steps:

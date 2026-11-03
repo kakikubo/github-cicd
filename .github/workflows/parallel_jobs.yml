@@ -3,14 +3,17 @@ on: workflow_dispatch
 permissions: {}
 jobs: # jobsキーへ複数のジョブを定義すれば、並列に実行される
   first:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: sleep 10 && echo "First job"
   second:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: sleep 10 && echo "Second job"
   third:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: sleep 10 && echo "Third job"
