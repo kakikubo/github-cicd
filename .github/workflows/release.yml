@@ -6,6 +6,7 @@ on:
 permissions: {}
 jobs:
   release:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
       VERSION: ${{ github.ref_name }}

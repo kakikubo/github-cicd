@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   run:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     env:
       BRANCH: main

@@ -18,6 +18,7 @@ on:
 permissions: {}
 jobs:            # Reusable Workflowsのジョブ定義
   comment:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
       contents: read

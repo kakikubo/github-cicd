@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   log:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: | # マークダウンテキストをジョブサマリーへ出力

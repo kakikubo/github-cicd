@@ -29,7 +29,8 @@ gh workflow view
 # ワークフローを実行
 gh workflow run manual.yml -f greeting=goodbye
 
-# アセット付きでリリースを作成
+# アセット付きでリリースを作成（example.txt はデモ時に生成する）
+echo "example asset" > example.txt
 gh release create v0.1.0 --title "v0.1.0" --notes "リリースノート" example.txt
 
 # 変数とシークレットを設定

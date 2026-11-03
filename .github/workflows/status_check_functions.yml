@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   fail:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: exit 1          # 終了ステータスが0以外なのでエラーが発生する
