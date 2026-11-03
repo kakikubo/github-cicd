@@ -3,6 +3,7 @@ on: pull_request
 permissions: {}
 jobs:
   scan:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - name: Run Trivy Security Scanner

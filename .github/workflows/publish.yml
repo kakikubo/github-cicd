@@ -12,6 +12,7 @@ env:
 permissions: {}
 jobs:
   publish:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:                           # Github Packagesへの書き込みを許可
       packages: write

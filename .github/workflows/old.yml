@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   test:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7 # 古いバージョンを意図的に指定

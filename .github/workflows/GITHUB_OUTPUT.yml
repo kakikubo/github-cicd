@@ -3,6 +3,7 @@ on: workflow_dispatch
 permissions: {}
 jobs:
   share:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - id: source                                     # ステップIDを設定

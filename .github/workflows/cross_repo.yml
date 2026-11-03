@@ -5,6 +5,7 @@ env:
   TARGET_REPO: github-terraform
 jobs:
   checkout:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - id: create
