@@ -14,10 +14,6 @@ jobs:
   test:
     timeout-minutes: 5
     runs-on: ubuntu-latest
-    # Docker アクションが GHCR からイメージを pull するために必要
-    permissions:
-      contents: read
-      packages: read
     env:
       GO111MODULE: on
     steps:
@@ -25,6 +21,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       # securego/gosec は公式が @master 参照を推奨。コミット SHA ピンだと
       # ジョブ未作成の startup_failure（workflow file issue）になるため master を使う。
+      # イミュータブル固定は #412（actions.lock）導入時に再検討する。
       - name: Run Gosec Security Scanner
         uses: securego/gosec@master
         with:

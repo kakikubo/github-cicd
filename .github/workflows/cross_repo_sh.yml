@@ -4,9 +4,25 @@ permissions: {}
 env:
   TARGET_REPO: github-terraform
 jobs:
+  # job-level if では secrets コンテキストが使えないため、先行ジョブで有無を判定する
+  check-secrets:
+    timeout-minutes: 1
+    runs-on: ubuntu-latest
+    outputs:
+      has_app_id: ${{ steps.check.outputs.has_app_id }}
+    steps:
+      - id: check
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+        run: |
+          if [ -n "${APP_ID}" ]; then
+            echo "has_app_id=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "has_app_id=false" >> "${GITHUB_OUTPUT}"
+          fi
   checkout:
-    # Dependabot 等ではリポジトリ Secrets が渡らず APP_ID が空になるためスキップ
-    if: ${{ secrets.APP_ID != '' }}
+    needs: check-secrets
+    if: ${{ needs.check-secrets.outputs.has_app_id == 'true' }}
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
