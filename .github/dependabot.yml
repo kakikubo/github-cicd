@@ -10,3 +10,7 @@ updates:
       timezone: Asia/Tokyo
     labels:                           # release.yml でリリースノートから除外されるラベル
       - dependencies
+    ignore:
+      # securego/gosec は公式推奨の @master 参照を維持する。
+      # コミット SHA へのピン留めは SAST が startup_failure になる（#413）。
+      - dependency-name: "securego/gosec"

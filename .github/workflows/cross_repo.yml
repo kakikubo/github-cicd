@@ -5,6 +5,8 @@ env:
   TARGET_REPO: github-terraform
 jobs:
   checkout:
+    # Dependabot 等ではリポジトリ Secrets が渡らず APP_ID が空になるためスキップ
+    if: ${{ secrets.APP_ID != '' }}
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
