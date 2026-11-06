@@ -19,7 +19,10 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      # securego/gosec は公式が @master 参照を推奨。コミット SHA ピンだと
+      # ジョブ未作成の startup_failure（workflow file issue）になるため master を使う。
+      # イミュータブル固定は #412（actions.lock）導入時に再検討する。
       - name: Run Gosec Security Scanner
-        uses: securego/gosec@93e445306112a2b3c6700b07f29e1236badbd919 # master
+        uses: securego/gosec@master
         with:
           args: ./...
