@@ -6,8 +6,8 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7     # ローカルアクション呼び出し前にチェックアウト
-      - uses: ./.github/actions/dump/ # ローカルアクションの呼び出し
+      - uses: actions/checkout@v7.0.1     # ローカルアクション呼び出し前にチェックアウト
+      - uses: $/.github/actions/dump/ # ローカルアクションの呼び出し（$/ はワークフローと同じコミットを指す）
         id: dump
         with:
           enable-context: 'true'      # 入力パラメータの指定

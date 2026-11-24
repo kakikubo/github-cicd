@@ -24,6 +24,10 @@ paths:
   .github/workflows/invalid.yml:
     ignore:
       - '"jobs" section is missing in workflow'
+  # actions.lock はローカルアクションを `$/` 形式でしか扱えないが、actionlint（v1.7.12）は未対応
+  .github/workflows/dump.yml:
+    ignore:
+      - 'specifying action "\$/\.github/actions/dump/" in invalid format'
   .github/workflows/old.yml:
     ignore:
       - the runner of "actions/setup-go@v4" action is too old to run on GitHub Actions. update the action's version to fix this issue
