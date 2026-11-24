@@ -18,10 +18,10 @@ jobs:
       GO111MODULE: on
     steps:
       - name: Checkout Source
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        uses: actions/checkout@v7.0.1
       # securego/gosec は公式が @master 参照を推奨。コミット SHA ピンだと
       # ジョブ未作成の startup_failure（workflow file issue）になるため master を使う。
-      # イミュータブル固定は #412（actions.lock）導入時に再検討する。
+      # 実行されるコミットは actions.lock で固定する（更新は gh actions-lock --relock）。
       - name: Run Gosec Security Scanner
         uses: securego/gosec@master
         with:
