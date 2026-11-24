@@ -19,9 +19,9 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v7.0.1
-      # securego/gosec は公式が @master 参照を推奨。コミット SHA ピンだと
-      # ジョブ未作成の startup_failure（workflow file issue）になるため master を使う。
-      # 実行されるコミットは actions.lock で固定する（更新は gh actions-lock --relock）。
+      # securego/gosec は公式推奨の @master 参照を使い、実行されるコミットは actions.lock で固定する
+      # （更新は gh actions-lock --relock）。リポジトリ設定の許可アクションは securego/gosec@* にしておく。
+      # @master のみの許可だと、SHA で解決されたときに startup_failure になる。
       - name: Run Gosec Security Scanner
         uses: securego/gosec@master
         with:
