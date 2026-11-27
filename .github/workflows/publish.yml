@@ -18,20 +18,20 @@ jobs:
       packages: write
       contents: read
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4       # コンテナレジストリへのログイン
+      - uses: actions/checkout@v7.0.1
+      - uses: docker/login-action@v4.8.0       # コンテナレジストリへのログイン
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6    # コンテナイメージのメタデータ生成
+      - uses: docker/metadata-action@v6.2.0    # コンテナイメージのメタデータ生成
         id: meta
         with:
           images: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
           tags: |
             type=semver,pattern={{version}},value=v${{ inputs.version }}
             type=raw,value=latest
-      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7  # コンテナイメージのビルドとプッシュ
+      - uses: docker/build-push-action@v7.4.0  # コンテナイメージのビルドとプッシュ
         with:
           push: true
           context: docker/example/
